@@ -4,14 +4,20 @@ import WormholeConnect, {
   } from '@wormhole-foundation/wormhole-connect';
   
   const wormholeConfig: WormholeConnectConfig = {
+    rpcs: {
+      Ethereum: "https://ethereum-rpc.publicnode.com",
+      Base: 'https://base-rpc.publicnode.com',
+      Bsc: 'https://bsc-rpc.publicnode.com',
+      Solana: 'https://mainnet.helius-rpc.com/?api-key=dad42de1-f300-4f40-9045-afc9386268a3',
+    },
     network: 'Mainnet',
-    chains: ['Ethereum', 'Base'],
-    tokens: ['Avail', 'AvailBase'],
+    chains: ['Ethereum', 'Base', 'Solana', 'Bsc'],
+    tokens: ['Avail', 'AvailBase', 'AvailSolana', 'AvailBsc'],
     ui: {
       title: 'Wormhole NTT UI',
       defaultInputs: {
         fromChain: 'Ethereum',
-        toChain: 'Base'
+        toChain: 'Bsc'
       },
       showHamburgerMenu: false,
     },
@@ -48,6 +54,27 @@ import WormholeConnect, {
               transceiver: [
                 {
                   address: '0xc986dD854B8F4acb5ccF2fa1cdacC113e6de0892',
+                  type: 'wormhole',
+                },
+              ],
+            },
+            {
+              chain: 'Solana',
+              manager: 'nttbhNaJput6dP8hXV6fuuhRHyvKYy2GJYAs64s176G',
+              token: 'CANeF11aEY9XNGbJmnQwTPvnnXoPfGKpPyLxZr2zVd9W',
+              transceiver: [
+                {
+                  address: '7SDRxV91WwGEgt6cHwBPBggQp9RX6YcbB7szgo6rzTXh',
+                  type: 'wormhole',
+                },
+              ],
+            }, {
+              chain: 'Bsc',
+              manager: '0xD7c5A24b84546A08c49b9F52457754Fa235a1A1c',
+              token: '0x39702843A6733932ec7CE0dde404e5A6DBd8C989',
+              transceiver: [
+                {
+                  address: '0xFAdEC315eb88a103c6bf1D5a16ae184d0B4d1Dbf',
                   type: 'wormhole',
                 },
               ],
@@ -103,6 +130,32 @@ import WormholeConnect, {
         tokenId: {
           chain: 'Base',
           address: '0xd89d90d26B48940FA8F58385Fe84625d468E057a'
+        },
+        coinGeckoId: 'avail',
+        icon: 'https://wormhole.com/token.png',
+        decimals: 18
+      },
+      AvailSolana: {
+        key: 'AvailSolana',
+        symbol: 'AVAIL',
+        nativeChain: 'Solana',
+        displayName: 'AVAIL',
+        tokenId: {
+          chain: 'Solana',
+          address: 'CANeF11aEY9XNGbJmnQwTPvnnXoPfGKpPyLxZr2zVd9W'
+        },
+        coinGeckoId: 'avail',
+        icon: 'https://wormhole.com/token.png',
+        decimals: 9
+      },
+      AvailBsc: {
+        key: 'AvailBsc',
+        symbol: 'AVAIL',
+        nativeChain: 'Bsc',
+        displayName: 'AVAIL',
+        tokenId: {
+          chain: 'Bsc',
+          address: '0x39702843A6733932ec7CE0dde404e5A6DBd8C989'
         },
         coinGeckoId: 'avail',
         icon: 'https://wormhole.com/token.png',

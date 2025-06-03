@@ -1,45 +1,99 @@
 {
-  "network": "Testnet",
+  "network": "Mainnet",
   "chains": {
-    "Sepolia": {
+    "Ethereum": {
       "version": "1.1.0",
       "mode": "locking",
       "paused": false,
-      "owner": "0x0f62A884eDAbD338e92302274e7cE7Cc1D467B74",
-      "manager": "0x40E856FD3eCBeE56c33388738f0B1C3aad573353",
-      "token": "0xb1C3Cb9b5e598d4E95a85870e7812B99f350982d",
+      "owner": "0xd23005D5cC4BBc347c1CF95036BA99AD943fC865",
+      "manager": "0x2E65520ff593b583A2e5895174eF7F40F78a90BD",
+      "token": "0xEeB4d8400AEefafC1B2953e0094134A887C76Bd8",
       "transceivers": {
         "threshold": 1,
         "wormhole": {
-          "address": "0x988140794D960fD962329751278Ef0DD2438a64C",
-          "pauser": "0x0f62A884eDAbD338e92302274e7cE7Cc1D467B74"
+          "address": "0xFaD96a1B1dad4a4391EEAb773Df739032526f389",
+          "pauser": "0xd23005D5cC4BBc347c1CF95036BA99AD943fC865"
         }
       },
       "limits": {
         "outbound": "184467440737.095516150000000000",
-        "inbound": {}
+        "inbound": {
+          "Base": "30000000.000000000000000000",
+          "Solana": "30000000.000000000000000000",
+          "Bsc": "30000000.000000000000000000"
+        }
       },
-      "pauser": "0x0f62A884eDAbD338e92302274e7cE7Cc1D467B74"
+      "pauser": "0xd23005D5cC4BBc347c1CF95036BA99AD943fC865"
     },
-    "BaseSepolia": {
+    "Base": {
       "version": "1.1.0",
       "mode": "burning",
       "paused": false,
-      "owner": "0x0f62A884eDAbD338e92302274e7cE7Cc1D467B74",
-      "manager": "0xf4B55457fCD2b6eF6ffd41E5F5b0D65fbE370EA3",
-      "token": "0xf50F2B4D58ce2A24b62e480d795A974eD0f77A58",
+      "owner": "0xd23005D5cC4BBc347c1CF95036BA99AD943fC865",
+      "manager": "0x4b3d190ca333a1414376Dd565ACBa58350A36d67",
+      "token": "0xd89d90d26B48940FA8F58385Fe84625d468E057a",
       "transceivers": {
         "threshold": 1,
         "wormhole": {
-          "address": "0xAb9C68eD462f61Fd5fd34e6c21588513d89F603c",
-          "pauser": "0x0f62A884eDAbD338e92302274e7cE7Cc1D467B74"
+          "address": "0xc986dD854B8F4acb5ccF2fa1cdacC113e6de0892",
+          "pauser": "0xd23005D5cC4BBc347c1CF95036BA99AD943fC865"
         }
       },
       "limits": {
         "outbound": "184467440737.095516150000000000",
-        "inbound": {}
+        "inbound": {
+          "Ethereum": "30000000.000000000000000000",
+          "Solana": "30000000.000000000000000000",
+          "Bsc": "30000000.000000000000000000"
+        }
       },
-      "pauser": "0x0f62A884eDAbD338e92302274e7cE7Cc1D467B74"
+      "pauser": "0xd23005D5cC4BBc347c1CF95036BA99AD943fC865"
+    },
+    "Solana": {
+      "version": "3.0.0",
+      "mode": "burning",
+      "paused": false,
+      "owner": "AvLFJWhB6yFCniJjAs4BeKCJCF5grUmmUPkPS63pqzdH",
+      "manager": "nttbhNaJput6dP8hXV6fuuhRHyvKYy2GJYAs64s176G",
+      "token": "CANeF11aEY9XNGbJmnQwTPvnnXoPfGKpPyLxZr2zVd9W",
+      "transceivers": {
+        "threshold": 1,
+        "wormhole": {
+          "address": "7SDRxV91WwGEgt6cHwBPBggQp9RX6YcbB7szgo6rzTXh"
+        }
+      },
+      "limits": {
+        "outbound": "30000000.100000000",
+        "inbound": {
+          "Ethereum": "30000000.100000000",
+          "Base": "30000000.100000000",
+          "Bsc": "30000000.100000000"
+        }
+      }
+    },
+    "Bsc": {
+      "version": "1.1.0",
+      "mode": "burning",
+      "paused": false,
+      "owner": "0xd23005D5cC4BBc347c1CF95036BA99AD943fC865",
+      "manager": "0xD7c5A24b84546A08c49b9F52457754Fa235a1A1c",
+      "token": "0x39702843A6733932ec7CE0dde404e5A6DBd8C989",
+      "transceivers": {
+        "threshold": 1,
+        "wormhole": {
+          "address": "0xFAdEC315eb88a103c6bf1D5a16ae184d0B4d1Dbf",
+          "pauser": "0xd23005D5cC4BBc347c1CF95036BA99AD943fC865"
+        }
+      },
+      "limits": {
+        "outbound": "184467440737.095516150000000000",
+        "inbound": {
+          "Ethereum": "30000000.000000000000000000",
+          "Base": "30000000.000000000000000000",
+          "Solana": "30000000.000000000000000000"
+        }
+      },
+      "pauser": "0xd23005D5cC4BBc347c1CF95036BA99AD943fC865"
     }
   }
 }
